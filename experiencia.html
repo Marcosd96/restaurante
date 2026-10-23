@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comparte tu experiencia · Mesa Compartida</title>
+  <meta name="description" content="Cuéntanos cómo te fue en tu encuentro de Mesa Compartida y comparte una foto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero hero-compact">
+    <div class="wrap">
+      <p class="eyebrow"><a href="index.html">← Mesa Compartida</a></p>
+      <h1>Comparte tu experiencia</h1>
+      <p class="lead">Cuéntanos cómo te fue en tu encuentro y, si quieres, sube una foto.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap">
+      <form id="form-experiencia" class="card" novalidate>
+        <label for="exp-nombre">Tu nombre</label>
+        <input id="exp-nombre" name="nombre" type="text" autocomplete="name" required>
+
+        <label for="exp-restaurante">Restaurante donde fue el encuentro</label>
+        <input id="exp-restaurante" name="restaurante" type="text" required>
+
+        <label for="exp-texto">¿Cómo te fue?</label>
+        <textarea id="exp-texto" name="experiencia" rows="5" placeholder="Lo que conversaron, lo que te gustó, lo que cambiarías" required></textarea>
+
+        <label for="exp-foto">Foto del encuentro (opcional, máx. 10 MB)</label>
+        <input id="exp-foto" name="foto" type="file" accept="image/*">
+
+        <button class="btn" type="submit">Enviar experiencia</button>
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>Mesa Compartida · Proyecto piloto</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

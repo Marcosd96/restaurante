@@ -27,7 +27,9 @@ function leerFoto(file) {
 
 // Conecta un formulario al endpoint. `prepare` recibe el formulario y devuelve
 // los datos a enviar (o lanza un Error con un mensaje para el usuario).
+// Si el formulario no está en la página actual, no hace nada.
 function connect(form, tipo, prepare) {
+  if (!form) return;
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
