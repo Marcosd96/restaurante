@@ -2,7 +2,7 @@
 // hoja de cálculo (ver README y apps-script/Code.gs). Mientras esté vacía, los
 // formularios funcionan en modo demo: validan y muestran confirmación, pero no
 // guardan nada.
-const FORM_ENDPOINT = "";
+const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbxxo-7Sp2WA0yvM-tgU6WMAlEddVclWb_sdnyeCSrih_gvTi1Bo4vaf8OP6QgTtvSe0/exec";
 
 const MAX_FOTO_MB = 10;
 
