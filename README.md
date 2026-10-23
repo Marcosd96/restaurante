@@ -25,9 +25,23 @@ npx vercel        # despliegue de prueba
 npx vercel --prod # producción
 ```
 
-## Guardar las inscripciones
+## Guardar los registros
 
-Ahora el formulario está en **modo demo**: valida los datos, pero no los guarda.
-Para recibir las respuestas:
-1. Crea un formulario gratuito en https://formspree.io y copia su URL.
-2. Pégala en `FORM_ENDPOINT` dentro de `script.js`.
+Las inscripciones y las experiencias se guardan en una hoja de cálculo de Google
+(pestañas *Inscripciones* y *Experiencias*). Las fotos quedan en la carpeta
+*Mesa Compartida - Fotos* de Google Drive, y la hoja guarda su enlace.
+
+Mientras `FORM_ENDPOINT` esté vacío en `script.js`, los formularios están en
+**modo demo**: validan los datos, pero no los guardan. Para activarlo:
+
+1. Crea una hoja de cálculo nueva en Google Sheets (por ejemplo, "Mesa Compartida - Registros").
+2. Menú *Extensiones → Apps Script*. Borra el contenido y pega el de `apps-script/Code.gs`. Guarda.
+3. *Implementar → Nueva implementación* → tipo **Aplicación web**.
+   - Ejecutar como: **Yo**
+   - Quién tiene acceso: **Cualquier usuario**
+4. *Implementar*, autoriza los permisos (hoja y Drive) y copia la URL que termina en `/exec`.
+5. Pégala en `FORM_ENDPOINT` dentro de `script.js` y vuelve a desplegar el sitio.
+
+Para enviar los registros, comparte la hoja o descárgala en *Archivo → Descargar*.
+Si cambias `Code.gs`, publica de nuevo en *Implementar → Gestionar implementaciones →
+Editar → Nueva versión* para que la URL siga igual.

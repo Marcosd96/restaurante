@@ -16,6 +16,7 @@
       <p class="eyebrow">Piloto · Personal de la biblioteca</p>
       <h1>Mesa Compartida</h1>
       <p class="lead">Creando conexiones para estar en cualquier lugar del mundo con cualquier persona del mundo.</p>
+      <p class="byline">by Eduard Puerto C.</p>
       <a class="btn" href="#inscripcion">Quiero participar</a>
     </div>
   </header>
@@ -32,12 +33,15 @@
         <li class="step">
           <span class="step-num">2</span>
           <h3>Durante</h3>
-          <p>Salimos al restaurante siguiendo un protocolo sencillo. <em>(Próximamente)</em></p>
+          <p>Vamos al restaurante siguiendo un protocolo sencillo:</p>
+          <ol class="protocol">
+            <li>Debes llegar y salir del restaurante por tu cuenta.</li>
+          </ol>
         </li>
         <li class="step">
           <span class="step-num">3</span>
           <h3>Después</h3>
-          <p>Compartimos una foto del encuentro y tus comentarios sobre la experiencia.</p>
+          <p>Compartes una foto del encuentro y tus comentarios en <a href="#experiencias">Comparte tu experiencia</a>.</p>
         </li>
       </ol>
     </section>
@@ -47,7 +51,7 @@
       <form id="form-inscripcion" class="card" novalidate>
         <fieldset>
           <legend>Datos básicos</legend>
-          <label for="nombre">Nombre para la reserva</label>
+          <label for="nombre">Tu nombre para la reserva</label>
           <input id="nombre" name="nombre" type="text" autocomplete="name" required>
         </fieldset>
 
@@ -70,7 +74,27 @@
         </fieldset>
 
         <button class="btn" type="submit">Enviar inscripción</button>
-        <p id="form-status" class="status" role="status" aria-live="polite"></p>
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="wrap" id="experiencias">
+      <h2>Comparte tu experiencia</h2>
+      <form id="form-experiencia" class="card" novalidate>
+        <label for="exp-nombre">Tu nombre</label>
+        <input id="exp-nombre" name="nombre" type="text" autocomplete="name" required>
+
+        <label for="exp-restaurante">Restaurante donde fue el encuentro</label>
+        <input id="exp-restaurante" name="restaurante" type="text" required>
+
+        <label for="exp-texto">¿Cómo te fue?</label>
+        <textarea id="exp-texto" name="experiencia" rows="5" placeholder="Lo que conversaron, lo que te gustó, lo que cambiarías" required></textarea>
+
+        <label for="exp-foto">Foto del encuentro (opcional, máx. 10 MB)</label>
+        <input id="exp-foto" name="foto" type="file" accept="image/*">
+
+        <button class="btn" type="submit">Enviar experiencia</button>
+        <p class="status" role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>

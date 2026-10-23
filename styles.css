@@ -69,8 +69,14 @@ h1 {
 .lead {
   font-size: 1.2rem;
   color: var(--muted);
-  margin: 0 0 28px;
+  margin: 0 0 8px;
   max-width: 34ch;
+}
+
+.byline {
+  margin: 0 0 28px;
+  color: var(--accent);
+  font-style: italic;
 }
 
 section { padding: 56px 16px 0; }
@@ -108,6 +114,13 @@ section h2 { font-size: 1.8rem; margin: 0 0 20px; }
 }
 .step h3 { margin: 8px 0 6px; font-size: 1.25rem; }
 .step p { margin: 0; color: var(--muted); }
+.step a { color: var(--accent); }
+
+.protocol {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
 
 .step-num {
   display: inline-grid;
@@ -155,6 +168,13 @@ input[type="text"], textarea {
   color: var(--text);
   font: inherit;
 }
+input[type="file"] {
+  width: 100%;
+  font: inherit;
+  color: var(--muted);
+}
+#form-experiencia .btn { margin-top: 24px; }
+
 input[type="text"]:focus, textarea:focus {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
