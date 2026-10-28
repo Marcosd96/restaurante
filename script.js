@@ -74,6 +74,7 @@ function connect(form, tipo, prepare) {
 connect(document.getElementById("form-inscripcion"), "inscripcion", (form) => {
   const data = Object.fromEntries(new FormData(form));
   data.sin_hablar = form.elements.sin_hablar.checked ? "Sí" : "No";
+  data.invitar = form.elements.invitar.checked ? "Sí" : "No";
   return data;
 });
 
