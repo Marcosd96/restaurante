@@ -8,7 +8,7 @@ const CARPETA_FOTOS = "Mesa Compartida - Fotos";
 const HOJAS = {
   inscripcion: {
     nombre: "Inscripciones",
-    columnas: ["fecha", "nombre", "restaurante", "direccion", "tema", "sin_hablar"],
+    columnas: ["fecha", "nombre", "restaurante", "direccion", "tema", "sin_hablar", "contacto", "invitado"],
   },
   experiencia: {
     nombre: "Experiencias",
